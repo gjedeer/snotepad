@@ -184,6 +184,13 @@ public class EditorFragment extends Fragment {
         tLastEdit = System.currentTimeMillis();
         saveUndoRedo();
         previousText = (String)etEditor.getText().toString();
+		btShare = (Button) view.findViewById(R.id.btShare);
+		btShare.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				share();
+			}
+		});
         return view;
     }
 
